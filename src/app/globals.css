@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tr-bg: 248 250 252;
+  --tr-panel: 255 255 255;
+  --tr-card: 241 245 249;
+  --tr-text: 30 41 59;
+  --tr-muted: 100 116 139;
+}
+
+.dark {
+  --tr-bg: 15 15 26;
+  --tr-panel: 26 26 46;
+  --tr-card: 22 33 62;
+  --tr-text: 226 232 240;
+  --tr-muted: 148 163 184;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-tr-bg text-tr-text antialiased;
+}
+
+.tr-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--tr-muted) / 0.5) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe area: use on fixed footers / full-height shells */
+.tr-safe-top {
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0px));
+}
+.tr-safe-bottom {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0px));
+}
+
+.tr-gradient-msg {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.tr-logo-ring {
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 50%, #5b21b6 100%);
+}

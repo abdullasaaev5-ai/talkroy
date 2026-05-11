@@ -1,0 +1,45 @@
+{
+  "name": "talkroy-messenger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "node scripts/clean-next.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "build:static": "node scripts/static-export-without-api.mjs build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed:talkroy": "node scripts/seed-talkroy.mjs",
+    "deploy:hosting": "npm run build:static && firebase deploy --only hosting",
+    "deploy:google": "npm run functions:build && npm run build:static && firebase deploy --only firestore:rules,functions,hosting",
+    "deploy:prod": "npm run build && firebase deploy --only firestore:rules,functions",
+    "functions:build": "npm --prefix functions run build"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "emoji-picker-react": "^4.14.0",
+    "firebase": "^12.13.0",
+    "firebase-admin": "^13.6.0",
+    "next": "14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "engines": {
+    "node": ">=18 <=22"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.29.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "cross-env": "^7.0.3",
+    "eslint-config-next": "14.2.21",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  }
+}

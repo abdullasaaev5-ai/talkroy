@@ -1,0 +1,78 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run build"]
+    }
+  ],
+  "hosting": {
+    "site": "talkroy-com",
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      { "source": "/login", "destination": "/login.html" },
+      { "source": "/login/", "destination": "/login.html" },
+      { "source": "/register", "destination": "/register.html" },
+      { "source": "/register/", "destination": "/register.html" },
+      { "source": "/onboarding", "destination": "/onboarding.html" },
+      { "source": "/onboarding/", "destination": "/onboarding.html" },
+      { "source": "/settings", "destination": "/settings.html" },
+      { "source": "/settings/", "destination": "/settings.html" },
+      { "source": "/admin", "destination": "/admin.html" },
+      { "source": "/admin/", "destination": "/admin.html" },
+      { "source": "/admin/users", "destination": "/admin/users.html" },
+      { "source": "/admin/users/", "destination": "/admin/users.html" },
+      { "source": "/admin/chats", "destination": "/admin/chats.html" },
+      { "source": "/admin/chats/", "destination": "/admin/chats.html" },
+      { "source": "/admin/stats", "destination": "/admin/stats.html" },
+      { "source": "/admin/stats/", "destination": "/admin/stats.html" },
+      { "source": "/admin/broadcast", "destination": "/admin/broadcast.html" },
+      { "source": "/admin/broadcast/", "destination": "/admin/broadcast.html" },
+      { "source": "/admin/moderators", "destination": "/admin/moderators.html" },
+      {
+        "source": "/admin/moderators/",
+        "destination": "/admin/moderators.html"
+      },
+      { "source": "/admin/monitor", "destination": "/admin/monitor.html" },
+      { "source": "/admin/monitor/", "destination": "/admin/monitor.html" },
+      { "source": "/chat", "destination": "/chat.html" },
+      { "source": "/chat/", "destination": "/chat.html" },
+      { "source": "/chat/**", "destination": "/chat/_.html" },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

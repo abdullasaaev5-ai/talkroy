@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="TalkRoy">
+  <defs>
+    <linearGradient id="g192" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <filter id="s192" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="192" height="192" rx="24" fill="#0f0f1a"/>
+  <circle cx="96" cy="92" r="78" fill="url(#g192)"/>
+  <g filter="url(#s192)" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 96 38 C 62 38 36 64 36 94 c 0 14 5 27 14 36 L 28 154 58 124 c 10 7 22 10 38 10 34 0 60 -26 60 -56 0 -30 -26 -54 -60 -54 Z"/>
+  </g>
+  <text x="96" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="56" font-weight="800">T</text>
+</svg>

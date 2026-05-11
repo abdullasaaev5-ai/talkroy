@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Chat bubble -->
+  <g transform="translate(20,20) scale(0.5)">
+    <path d="M256 48C141.1 48 48 130.1 48 230c0 55.5 27.3 105.3 70 139.5L98 448l90-50c21 6.5 43.5 10 68 10 114.9 0 208-82.1 208-178S370.9 48 256 48z" fill="url(#bubbleGrad)"/>
+    <circle cx="176" cy="230" r="28" fill="white"/>
+    <circle cx="256" cy="230" r="28" fill="white"/>
+    <circle cx="336" cy="230" r="28" fill="white"/>
+  </g>
+  <!-- Text -->
+  <text x="320" y="190" font-family="Arial, Helvetica, sans-serif" font-size="140" font-weight="bold" fill="white">Talk</text>
+  <text x="640" y="190" font-family="Arial, Helvetica, sans-serif" font-size="140" font-weight="bold" fill="url(#textGrad)">Roy</text>
+  <text x="325" y="250" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="400" fill="#94a3b8" letter-spacing="12">MESSENGER</text>
+</svg>
